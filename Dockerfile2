@@ -7,9 +7,9 @@ RUN yum install wget -y
 RUN yum install vim -y
 RUN mkdir /opt/Tomcat
 WORKDIR /opt/Tomcat
-RUN curl -O https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.73/bin/apache-tomcat-9.0.73.tar.gz
+RUN curl -O https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.24/bin/apache-tomcat-10.1.24.tar.gz
 RUN tar -xvzf apache*.tar.gz
-RUN mv apache-tomcat-9.0.73/* /opt/Tomcat
+RUN mv apache-tomcat-10.1.24/* /opt/Tomcat
 RUN java -version
 WORKDIR /opt/Tomcat/webapps
 COPY cloudgen-1.war /opt/Tomcat/webapps/
